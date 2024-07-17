@@ -9,8 +9,12 @@ class Ruler:
     def test(self, obj, debug=False):
         for [key, method, expected] in self.rules:
             objkey = find_key(obj, key)
+
+            if objkey is None:
+                continue
+
             expected_cleaned = expected.lower().strip()
-            value = obj[objkey].strip()
+            value = str(obj[objkey]).strip()
             value_cleaned = value.lower()
             method_cleaned = method.lower().strip()
             if method_cleaned in [

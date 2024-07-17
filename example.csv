@@ -1,0 +1,4 @@
+field,comparison,value
+id,starts with,ABC123
+year,is,2023
+version,in range,100 ... 200
