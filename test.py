@@ -9,6 +9,7 @@ class TestExample(unittest.TestCase):
         self.assertTrue(ruler.test({"year": 2023}))
         self.assertTrue(ruler.test({"id": "ABC12345"}))
         self.assertTrue(ruler.test({"version": 150}))
+        self.assertTrue(ruler.test({"year": 2023, "city": "Chattanooga"}))
 
 
 if __name__ == "__main__":
